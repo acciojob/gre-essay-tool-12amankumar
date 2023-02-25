@@ -1,12 +1,12 @@
 //your code here
-let textbox = document.getElementById("evaluatedText");
-let H3=document.getElementById("wordCount");
-
-textbox.addEventListener("input", text)
-
-function text(){
-    let word=textbox.value;
-    let wordlength=word.length;
-    wordCount.innerHTML= wordlength;
-}
-
+function countWord() {
+      var words = document.getElementById("evaluatedText").value;
+            var count = 0;
+            var split = words.split(' ');
+            for (var i = 0; i < split.length; i++) {
+                if (split[i] != "") {
+                    count += 1;
+                }
+            }
+ document.getElementById("wordCount").innerHTML = count;
+        }
